@@ -1,0 +1,55 @@
+body {
+  /*text-align: center;*/
+}
+.warum {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  padding: 5px;
+}
+
+.materialen {
+  flex: 1; /* всі колонки однакової ширини */
+  background: lightgray;
+  padding: 20px;
+}
+.leistungen {
+  display: flex;
+  gap: 10px;
+  text-align: center;
+  padding: 5px;
+}
+
+.materialen svg {
+  margin: 0 auto;
+  color: aqua;
+}
+
+.projekte {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+  gap: 16px; /* відстань між зображеннями */
+  padding: 16px; /* внутрішні відступи контейнера */
+}
+
+.projekte .gallery img {
+  width: 100%; /* фото займає всю ширину свого блоку */
+  height: auto; /* висота підлаштовується пропорційно */
+  display: block; /* прибирає зайві відступи */
+  border-radius: 8px; /* optional: округлені кути */
+}
+
+/* Адаптив для планшетів і телефонів */
+@media (max-width: 768px) {
+  .projekte {
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки на планшеті */
+  }
+}
+
+@media (max-width: 480px) {
+  .projekte {
+    grid-template-columns: 1fr; /* 1 колонка на телефоні */
+  }
+}
